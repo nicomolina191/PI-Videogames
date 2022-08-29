@@ -1,0 +1,9 @@
+.loading {
+    background-color: black;
+}
+
+.img-loading {
+    position: fixed;
+    left: 0;
+    bottom: -1px;
+}

@@ -1,0 +1,100 @@
+.searchBar {
+    display: inline-flex;
+    column-gap: 180px;
+    background: rgb(23,25,30);
+    background: linear-gradient(0deg, rgba(23,25,30,1) 0%, rgba(42,45,60,1) 100%);
+    padding: 15px;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #2bcac6,
+            0 0 0.8rem #2bcac6,
+            0 0 2.8rem #2bcac6,
+            inset 0 0 1.3rem #2bcac6; box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #2bcac6,
+            0 0 0.8rem #2bcac6,
+            0 0 2.8rem #2bcac6,
+            inset 0 0 1.3rem #2bcac6;
+}
+
+@media (max-width: 1300px) {
+    .searchBar {
+        column-gap: 100px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .searchBar {
+        column-gap: 10px;
+    }
+}
+
+@media (max-width: 840px) {
+    .searchBar {
+        display: block;
+    }
+}
+
+.search {
+    top: 0;
+    right: 4%;
+}
+
+.search input {
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.search button {
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #3f7284;
+    transition: 0.3s;
+    color: white;
+}
+
+.btn-reload {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn-reload:hover {
+    background-color: #3f7284;
+    transition: 0.3s;
+    color: white;
+}
+
+.btn-create {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border: 3px solid #2bcac6;
+    color: white;
+    background-color: grey
+}
+
+.btn-create:hover {
+    transition: 0.3s;
+    background-color: white;
+    color: black;
+}
+
+.link-landing {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}

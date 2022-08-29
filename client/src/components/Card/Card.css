@@ -1,0 +1,41 @@
+.card {
+    width: 400px;
+    height: auto;
+    background: rgb(23,25,30);
+    background: linear-gradient(0deg, rgba(23,25,30,1) 0%, rgba(42,45,60,1) 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 200ms ease-in-out;
+    position: relative;
+    color: white;
+    padding-top: 5%;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #2bcac6,
+            0 0 0.8rem #2bcac6,
+            0 0 2.8rem #2bcac6,
+            inset 0 0 1.3rem #2bcac6; 
+}
+
+.cards :hover {
+    transform: scale(110%);
+}
+
+.cardImg {
+    border-radius: 5px;
+    border: 1px solid rgb(204, 202, 202);
+}
+
+.cardImg:hover, .cardTitle:hover, .cardGenres:hover {
+    transform: none;
+}
+
+.cardTitle {
+    font-size: 28px;
+}
+
+.cardGenres {
+    font-size: 18px;
+}
