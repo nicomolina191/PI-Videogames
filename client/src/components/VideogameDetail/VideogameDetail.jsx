@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { getDetail } from '../../Redux/actions';
+import { getDetail, deleteVideogame } from '../../Redux/actions';
 import { useEffect, useState } from 'react';
 import Loading from '../Loading/Loading';
 import './VideogameDetail.css';
@@ -9,6 +9,7 @@ import './VideogameDetail.css';
 export default function VideogameDetail(props) {
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const detail = useSelector((state) => state.detail);
     const videogames = useSelector((state) => state.allVideogames);
@@ -29,6 +30,13 @@ export default function VideogameDetail(props) {
 		games();
     }, [dispatch, props.match.params.id])
 
+    function handleDelete() {
+        dispatch(deleteVideogame(props.match.params.id));
+        alert('Videogame delete successfully! Redirecting to home page');
+        history.push('/home');
+    }
+
+
     console.log(detail);
     console.log(props.match.params.id);
     console.log(gameDb);
@@ -45,6 +53,7 @@ export default function VideogameDetail(props) {
                 </div>
                 <div className='sectionDetail'>
                     <div className='videogame-details'>
+                        <button className='btn-delete' onClick={handleDelete}>Delete Videogame</button>
                         <h1 className='videogame-title'>{videogameDb[0].name}</h1>
                         <img src={videogameDb[0].background_image} alt="videogame" />
                         <div className='videogame-description'>

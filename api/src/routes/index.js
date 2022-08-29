@@ -160,5 +160,14 @@ router.get('/genres', async (req, res) => {
     }
 });
 
+router.delete('/videogame/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        let game = await Videogame.destroy({ where: { id: id } });
+        return res.status(200).send("Videogame delete successfully!");
+    } catch (err) {
+        return res.status(404).send(err);
+    }
+});
 
 module.exports = router;

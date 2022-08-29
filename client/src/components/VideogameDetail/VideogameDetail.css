@@ -19,6 +19,21 @@
     color: white;
 }
 
+.btn-delete {
+    float: right;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.btn-delete:hover {
+    background-color: red;
+    transition: 0.3s;
+    color: white;
+}
+
 .sectionDetail {
     display: flex;
     justify-content: center;
@@ -54,6 +69,7 @@
 
 .videogame-title {
     font-size: 40px;
+    margin-top: 30px;
     margin-bottom: 40px;
     text-shadow:
         0 0 7px #2bcac6,

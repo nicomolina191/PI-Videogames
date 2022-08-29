@@ -67,3 +67,10 @@ export function getDetail(id) {
         })
     }
 }
+
+export function deleteVideogame(id) {
+    return async function(dispatch) {
+        var json = await axios.delete(`/videogame/${id}`);
+        return json;
+    }
+}
