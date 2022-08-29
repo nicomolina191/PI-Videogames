@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { Router } = require('express');
 
 // Importar todos los routers;
@@ -16,7 +17,7 @@ const { Videogame, Genre } = require ('../db.js');
 const getApiInfo = async () => {
     try {
         let apiInfo = [];
-        let apiUrl = await axios.get(`https://api.rawg.io/api/games?key=e99eb3808ce7474ca36f7846c40c04d7`);
+        let apiUrl = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}`);
         for (let i = 0; i < 5; i++) {
             let info = await apiUrl.data.results.map(el => {
                 return {
@@ -54,7 +55,7 @@ const getAllVideogames = async () => {
 // TRAER GENEROS DE LA API
 
 const getGenresApi = async () => {
-    let genres = await axios.get(`https://api.rawg.io/api/genres?key=e99eb3808ce7474ca36f7846c40c04d7`)
+    let genres = await axios.get(`https://api.rawg.io/api/genres?key=${API_KEY}`)
     .then(response => response.data.results.map(el => {
         return {
             name: el.name
@@ -92,7 +93,7 @@ router.get('/videogames', async (req, res) => {
     let videogamesTotal = await getAllVideogames();
     try {
         if(name) {
-            const search = await axios.get(`https://api.rawg.io/api/games?key=e99eb3808ce7474ca36f7846c40c04d7&search=${name}`);
+            const search = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&search=${name}`);
             let list = [];
             for (let i = 0; i < 15; i++) {
                 list = list.concat(search.data.results[i]);
@@ -116,7 +117,7 @@ router.get('/videogames', async (req, res) => {
 router.get('/videogame/:id', async (req, res) => {
     let { id } = req.params;
     try {
-        const videogameDetail = await axios.get(`https://api.rawg.io/api/games/${id}?key=e99eb3808ce7474ca36f7846c40c04d7`)
+        const videogameDetail = await axios.get(`https://api.rawg.io/api/games/${id}?key=${API_KEY}`)
         .then(response => {
             return {
                 name: response.data.name,
