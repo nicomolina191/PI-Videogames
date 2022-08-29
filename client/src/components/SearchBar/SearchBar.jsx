@@ -25,8 +25,8 @@ export default function SearchBar({ handleClick }) {
     return (
         <div className='searchBar'>
             <div>
-                <Link to='/'>
-                    <a className='link-landing'>Henry Videogames</a>
+                <Link to='/' style={{ textDecoration: 'none' }}>
+                    <a className='link-landing' >Henry Videogames By Nicolás Molina</a>
                 </Link>
             </div>
             <div>
