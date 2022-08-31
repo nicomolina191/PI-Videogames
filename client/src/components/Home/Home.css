@@ -7,7 +7,16 @@
 }
 
 .home {
-    padding-bottom: 35%;
+    padding-bottom: 50px;
+}
+
+.link-card {
+    text-decoration: none;
+    width: 400px;
+}
+
+.link-card:hover {
+    transform: scale(110%);
 }
 
 .reload {

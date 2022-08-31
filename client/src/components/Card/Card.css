@@ -11,6 +11,7 @@
     position: relative;
     color: white;
     padding-top: 5%;
+    margin-bottom: 30px;
     box-shadow: 0 0 .2rem #fff,
             0 0 .2rem #fff,
             0 0 2rem #2bcac6,
@@ -19,9 +20,6 @@
             inset 0 0 1.3rem #2bcac6; 
 }
 
-.cards :hover {
-    transform: scale(110%);
-}
 
 .cardImg {
     border-radius: 5px;

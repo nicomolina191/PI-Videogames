@@ -36,7 +36,6 @@ export default function VideogameDetail(props) {
         history.push('/home');
     }
 
-
     console.log(detail);
     console.log(props.match.params.id);
     console.log(gameDb);
@@ -59,7 +58,7 @@ export default function VideogameDetail(props) {
                         <div className='videogame-description'>
                             <p>{videogameDb[0].description}</p>
                         </div>
-                        <p className='videogame-genres'>Genres: {videogameDb[0].genres.join(', ').toString()}</p>
+                        <p className='videogame-genres'>Genres: {videogameDb[0].genres.map(el => el.name).join(', ').toString()}</p>
                         <p className='videogame-released'>Released: {videogameDb[0].released}</p>
                         <p className='videogame-rating'>Rating: {videogameDb[0].rating}</p>
                         <p className='videogame-platforms'>Platforms: {videogameDb[0].platforms.join(', ').toString()}</p>

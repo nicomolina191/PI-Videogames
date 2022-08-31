@@ -40,7 +40,16 @@ const getApiInfo = async () => {
 // TRAER JUEGOS DE LA DB
 
 const getDbInfo = async () => {
-    return await Videogame.findAll();
+    let gamesDb = await Videogame.findAll({
+        include: {
+            model: Genre,
+            attributes: ['name'],
+            through: {
+                attributes: [],
+            }
+        }
+    });
+    return gamesDb
 };
 
 // UNION DE JUEGOS DE LA API Y LA DB
@@ -48,7 +57,7 @@ const getDbInfo = async () => {
 const getAllVideogames = async () => {
     const apiInfo = await getApiInfo();
     const dbInfo = await getDbInfo();
-    const infoTotal = apiInfo.concat(dbInfo);
+    const infoTotal = [].concat(apiInfo, dbInfo);
     return infoTotal;
 };
 
@@ -138,7 +147,9 @@ router.get('/videogame/:id', async (req, res) => {
 router.post('/videogames', async (req, res) => {
     let { name, description, released, rating, background_image, genres, platforms } = req.body;
     try {
-        let game = await Videogame.create({ name, description, released, rating, background_image, genres, platforms });
+        let game = await Videogame.create({ name, description, released, rating, background_image, platforms });
+        let genreDb = await Genre.findAll({ where: { name: genres }});
+        game.addGenre(genreDb);
         return res.status(200).send('Videogame created successfully!');
     } catch (err) {
         return res.status(404).send(err);

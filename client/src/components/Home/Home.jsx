@@ -92,12 +92,11 @@ export default function Home() {
                     paginado={paginado}
                     />
                 </div>
-                <div className='allCards'>
                     <div className='cards'>
                     {
                         currentVideogames && currentVideogames.map (el => {
                             return (
-                                <Link to={"/detail/" + el.id} style={{ textDecoration: 'none' }}>
+                                <Link className='link-card' to={"/detail/" + el.id} key={el.id}>
                                     <Card
                                     key={el.id}
                                     id={el.id}
@@ -110,7 +109,6 @@ export default function Home() {
                         }
                     </div>
                 </div>
-            </div>
         )
 }
 
