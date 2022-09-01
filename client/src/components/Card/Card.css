@@ -24,6 +24,7 @@
 .cardImg {
     border-radius: 5px;
     border: 1px solid rgb(204, 202, 202);
+    object-fit: cover;
 }
 
 .cardImg:hover, .cardTitle:hover, .cardGenres:hover {

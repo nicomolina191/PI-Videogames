@@ -22,7 +22,7 @@ function rootReducer (state = initialState, action) {
             const genreVideogames = state.allVideogames;
             const genreFiltered = action.payload === 'All Videogames' 
                 ? genreVideogames
-                : genreVideogames.filter(el => el.genres.includes(action.payload));
+                : genreVideogames.filter(el => el.genres.map(el => el.name).includes(action.payload))
             return {
                 ...state,
                 videogames: genreFiltered

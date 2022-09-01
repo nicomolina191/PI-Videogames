@@ -8,6 +8,7 @@ import './CreateVideogame.css';
 export default function CreateVideogame() {
 
     const dispatch = useDispatch();
+    
     const genres = useSelector((state) => state.genres);
 
     const [input, setInput] = useState({
@@ -58,7 +59,7 @@ export default function CreateVideogame() {
         } else if (input.rating <= 1 || input.rating > 5) {
             errors.rating = 'The rating value must be between 1 and 5';
             setButtonEnabled(false);
-        }
+        } else if (input.rating)
 
         if (!input.platforms.length > 0) {
             errors.platforms = 'The platforms field must not be empty';
@@ -174,7 +175,7 @@ export default function CreateVideogame() {
                     </div>
                     <div>
                         <label>Rating: </label>
-                        <input className='input1' type="text" value={input.rating} name='rating' onChange={(e) => handleChange(e)}/>
+                        <input className='input1' type="number" value={input.rating} name='rating' onChange={(e) => handleChange(e)}/>
                         {
                             errors.rating && (
                                 <p className='error-input'>{errors.rating}</p>
@@ -211,7 +212,7 @@ export default function CreateVideogame() {
                                 <select onChange={(e) => handleSelect(e)}>
                                 {
                                     genres && genres.map(el => (
-                                        <option value={el.name}>{el.name}</option>
+                                        <option value={el.name} key={el.id}>{el.name}</option>
                                     ))
                                 }
                                 </select>

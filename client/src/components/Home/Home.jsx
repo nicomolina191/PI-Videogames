@@ -1,8 +1,6 @@
 import './Home.css';
 import React from 'react';
-// import { Component } from 'react';
 import { getVideogames, getGenres, filterVideogamesByGenre, filterVideogamesByOrigin, orderVideogamesByName } from '../../Redux/actions';
-// import { connect } from "react-redux";
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -111,49 +109,3 @@ export default function Home() {
                 </div>
         )
 }
-
-// export class Home extends Component {
-
-    // componentDidMount() {
-    //     this.props.getVideogames();
-    // }
-
-    // render() {
-    //     return (
-    //         <div className='home'>
-    //             <Link to='/videogames'>
-    //                 <button>Crear Juego</button>
-    //             </Link>
-    //             <h1>Videojuegos del 3Teklas</h1>
-    //             <button className='reload'>Volver a cargar los juegos</button>
-    //             <div className='cards'>
-    //             {
-    //                 this.props.videogames && this.props.videogames.map (el => {
-    //                     return (
-    //                         <Card
-    //                         name={el.name}
-    //                         image={el.background_image}
-    //                         genres={el.genres}/>
-    //                         )
-    //                     })
-    //                 }
-    //             </div>
-
-    //         </div>
-    //     )
-    // }
-
-
-// export const mapStateToProps = (state) => {
-//     return {
-//         videogames: state.videogames
-//     }
-// }
-
-// export function mapDispatchToProps(dispatch) {
-//     return {
-//         getVideogames: () => dispatch(getVideogames())
-//     }
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Home);
