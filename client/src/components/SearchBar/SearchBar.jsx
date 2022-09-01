@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import './SearchBar.css';
 
 
-export default function SearchBar({ handleClick }) {
+export default function SearchBar({ handleClick, setCurrentPage }) {
 
     const dispatch = useDispatch();
 
@@ -20,6 +20,7 @@ export default function SearchBar({ handleClick }) {
     function handleSubmit(e) {
         e.preventDefault();
         dispatch(searchVideogames(name));
+        setCurrentPage(1);
     }
 
     return (

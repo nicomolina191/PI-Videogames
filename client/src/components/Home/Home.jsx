@@ -1,6 +1,6 @@
 import './Home.css';
 import React from 'react';
-import { getVideogames, getGenres, filterVideogamesByGenre, filterVideogamesByOrigin, orderVideogamesByName } from '../../Redux/actions';
+import { getVideogames, getGenres, filterVideogamesByGenre, filterVideogamesByOrigin, orderVideogamesByName, filterReview } from '../../Redux/actions';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -74,7 +74,7 @@ export default function Home() {
         <Loading/>) : (
             <div className='home'>
                 <div>
-                    <SearchBar handleClick={handleClick}/>
+                    <SearchBar handleClick={handleClick} setCurrentPage={setCurrentPage}/>
                 </div>
                 <div>
                     <FilterBar 
