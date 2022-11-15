@@ -35,7 +35,7 @@ ul {
     background-color: #4CAF50 !important;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
 
     .number-btn {
         padding: 15px 10px;
