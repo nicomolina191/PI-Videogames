@@ -126,3 +126,65 @@ fieldset {
     transition: 0.3s;
     color: white;
 }
+
+@media (max-width: 1024px) {
+
+    .sectionForm1 {
+        margin: 0px;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+
+    .createTitle {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .createTitle {
+        font-size: 20px;
+    }
+
+    .sectionForm1 {
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .createVideogame {
+        display: grid;
+    }
+
+    .createTitle {
+        font-size: 15px;
+        width: 150px;
+        margin-left: 70px;
+        margin-top: 50px;
+    }
+
+    .sectionForm1 {
+        font-size: 10px;
+        margin-left: 5px;
+        padding: 30px;
+    }
+
+    .btn-home {
+        margin-left: 20px;
+        font-size: 10px;
+    }
+
+    .input1 {
+        width: 250px;
+    }
+
+    .btn-reset {
+        font-size: 10px;
+    }
+
+    .btn-create-videogame {
+        font-size: 10px;
+    }
+}

@@ -95,3 +95,90 @@
     text-align: left;
     font-size: 20px;
 }
+
+@media (max-width: 1024px) {
+
+    .videogame-details img {
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .sectionDetail {
+        justify-content: left;
+    }
+
+    .videogame-details {
+        width: 80%;
+    }
+
+    .videogame-details img {
+        width: 400px;
+        height: 200px;
+    }
+
+    .videogame-title {
+        font-size: 30px;
+        margin-top: 60px;
+    }
+
+    .videogame-description {
+        font-size: 15px;
+    }
+
+    .videogame-genres, .videogame-released, .videogame-rating, .videogame-platforms {
+        font-size: 15px;
+    }
+
+    .btn-delete {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .details {
+        padding-left: 0px;
+        display: grid;
+    }
+
+    .btn-div-home {
+        width: 100px;
+        height: 100px;
+    }
+
+    .videogame-details {
+        margin-top: 30px;
+        width: 100%;
+        margin-left: 15px;
+    }
+
+    .videogame-details img {
+        width: 250px;
+        height: 200px;
+    }
+
+    .videogame-title {
+        font-size: 20px;
+    }
+
+    .videogame-description {
+        font-size: 10px;
+        margin-left: 18px;
+    }
+
+    .videogame-genres, .videogame-released, .videogame-rating, .videogame-platforms {
+        font-size: 10px;
+        margin-left: 18px;
+    }
+
+    .btn-home-detail {
+        font-size: 10px;
+    }
+
+    .btn-delete {
+        font-size: 10px;
+    }
+}

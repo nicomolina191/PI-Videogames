@@ -20,6 +20,43 @@
             inset 0 0 1.3rem #2bcac6; 
 }
 
+.card:before,
+.card:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+            #0000ff, #00ff00, #ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+    border-radius: 10px;
+}
+
+@keyframes steam {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.card:after {
+    filter: blur(50px);
+}
+
+.card:hover {
+    box-shadow: none;
+}
 
 .cardImg {
     border-radius: 5px;
@@ -37,4 +74,46 @@
 
 .cardGenres {
     font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+
+    .card {
+        width: 350px;
+        height: 350px;
+    }
+
+    .cardImg {
+        width: 250px;
+        height: 200px;
+    }
+
+    .cardTitle {
+        font-size: 20px;
+    }
+
+    .cardGenres {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .card {
+        width: 250px;
+        height: 280px;
+    }
+
+    .cardImg {
+        width: 200px;
+        height: 150px;
+    }
+
+    .cardTitle {
+        font-size: 15px;
+    }
+
+    .cardGenres {
+        font-size: 10px;
+    }
 }

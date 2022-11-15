@@ -20,23 +20,6 @@
             inset 0 0 1.3rem #2bcac6;
 }
 
-@media (max-width: 1300px) {
-    .searchBar {
-        column-gap: 100px;
-    }
-}
-
-@media (max-width: 1100px) {
-    .searchBar {
-        column-gap: 10px;
-    }
-}
-
-@media (max-width: 840px) {
-    .searchBar {
-        display: block;
-    }
-}
 
 .search {
     top: 0;
@@ -96,4 +79,91 @@
 .link-landing {
     color: white;
     font-size: 30px;
+}
+
+@media (max-width: 1366px) {
+    
+    .searchBar {
+        column-gap: 100px;
+    }
+
+    .link-landing {
+        font-size: 25px !important;
+    }
+
+    .search input {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1024px) {
+    
+    .searchBar {
+        column-gap: 10px;
+    }
+
+    .btn-create {
+        font-size: 12px;
+    }
+
+    .btn-reload {
+        font-size: 12px;
+    }
+
+    .search button {
+        font-size: 12px;
+    }
+
+    .search input {
+        font-size: 12px;
+    }
+
+    .link-landing {
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width: 800px) {
+    
+    .searchBar {
+        display: block;
+    }
+
+    .btn-reload {
+        margin-top: 10px;
+    }
+
+    .btn-create {
+        margin-top: 10px;
+    }
+
+    .search input {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    
+    .searchBar {
+        display: block;
+    }
+
+    .btn-reload {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .btn-create {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .search input {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .search button {
+        font-size: 10px;
+    }
 }

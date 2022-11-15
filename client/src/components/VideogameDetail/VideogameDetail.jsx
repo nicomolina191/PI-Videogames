@@ -45,7 +45,7 @@ export default function VideogameDetail(props) {
         return loadingPage ? (
             <Loading/>) : (
             <div className="details">
-                <div>
+                <div className='btn-div-home'>
                     <Link to='/home'>
                         <button className='btn-home-detail'>Home</button>
                     </Link>

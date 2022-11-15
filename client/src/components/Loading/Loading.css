@@ -6,4 +6,23 @@
     position: fixed;
     left: 0;
     bottom: -1px;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+
+    .img-loading {
+        width: 800px;
+        height: 1024px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .img-loading {
+        width: 400px;
+        height: 640px;
+    }
+
 }

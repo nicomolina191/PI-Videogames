@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { createVideogame, getGenres } from '../../Redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import './CreateVideogame.css';
+import image from '../../assets/Mario.jpg';
 
 export default function CreateVideogame() {
 
@@ -22,7 +23,7 @@ export default function CreateVideogame() {
     });
 
     const [errors, setErrors] = useState({});
-    const [buttonEnabled, setButtonEnabled] = useState(true);
+    const [buttonEnabled, setButtonEnabled] = useState(false);
 
 
     function validateInput(input) {
@@ -121,6 +122,7 @@ export default function CreateVideogame() {
     function handleSubmit(e) {
         e.preventDefault();
         console.log(input);
+        if (input.background_image === "") input.background_image = image;
         dispatch(createVideogame(input));
         alert('Videogame created successfully!')
         setInput({

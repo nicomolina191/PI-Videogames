@@ -1,14 +1,12 @@
 import './LandingPage.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import backgroundVideo from '../../assets/landing_video.mp4';
+import background from '../../assets/landing-gif.gif';
 
 export default function LandingPage() {
     return (
         <div className='container'>
-            <video autoPlay loop muted id="myVideo" width='100%' height='100%'>
-                <source src={backgroundVideo} type='video/mp4'/>
-            </video>
+            <img src={background} alt="" className='landing-img' />
             <div className='text'>
                 <h1>Welcome to Henry Videogames!</h1>
                 <Link to='/home'>

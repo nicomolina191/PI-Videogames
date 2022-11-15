@@ -8,7 +8,7 @@ ul {
     margin-bottom: 30px;
 }
 
-.number button{
+.number-btn {
     padding: 20px 15px;
     height: 32px;
     text-align: center;
@@ -26,11 +26,19 @@ ul {
     font-size: 30px;
 }
 
-.number button:hover {
+.number-btn:hover {
     opacity: 0.6;
     transition: 0.3s;
 }
 
-.number button:active {
-    background-color: #4CAF50;
+.number-btn:visited {
+    background-color: #4CAF50 !important;
+}
+
+@media (max-width: 400px) {
+
+    .number-btn {
+        padding: 15px 10px;
+        font-size: 18px;
+    }
 }
