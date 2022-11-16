@@ -18,7 +18,16 @@
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+
+    .img-loading {
+        width: 412px;
+        height: 777px;
+    }
+
+}
+
+@media (max-width: 400px) {
 
     .img-loading {
         width: 400px;

@@ -51,7 +51,23 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+
+    .cards {
+        display: block;
+        margin-left: 0px;
+        width: 300px;
+        margin: 0px;
+        margin-left: 55px;
+    }
+
+    .link-card {
+        width: 250px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 400px) {
 
     .cards {
         display: block;

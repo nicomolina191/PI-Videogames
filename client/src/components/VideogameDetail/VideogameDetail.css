@@ -21,7 +21,6 @@
 
 .btn-delete {
     float: right;
-    margin-bottom: 30px;
     border-radius: 10px;
     font-size: 15px;
     cursor: pointer;
@@ -70,7 +69,6 @@
 
 .videogame-title {
     font-size: 40px;
-    margin-top: 30px;
     margin-bottom: 40px;
     text-shadow:
         0 0 7px #2bcac6,
@@ -94,6 +92,19 @@
     margin-left: 30px;
     text-align: left;
     font-size: 20px;
+}
+
+.videogame-title-db {
+    margin-top: 60px;
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-shadow:
+        0 0 7px #2bcac6,
+        0 0 10px #2bcac6,
+        0 0 21px #2bcac6,
+        0 0 42px #2bcac6,
+        0 0 82px #2bcac6,
+        0 0 151px #2bcac6;
 }
 
 @media (max-width: 1024px) {
@@ -137,7 +148,46 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+
+    .details {
+        padding-left: 0px;
+        display: grid;
+    }
+
+    .btn-div-home {
+        width: 100px;
+        height: 100px;
+    }
+
+    .videogame-details {
+        margin-top: 30px;
+        width: 100%;
+        margin-left: 15px;
+    }
+
+    .videogame-details img {
+        width: 300px;
+        height: 250px;
+    }
+
+    .videogame-title {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    .videogame-description {
+        font-size: 15px;
+        margin-left: 18px;
+    }
+
+    .videogame-genres, .videogame-released, .videogame-rating, .videogame-platforms {
+        font-size: 15px;
+        margin-left: 18px;
+    }
+}
+
+@media (max-width: 400px) {
 
     .details {
         padding-left: 0px;

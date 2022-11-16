@@ -34,7 +34,7 @@ select {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     
     select {
         font-size: 10px;

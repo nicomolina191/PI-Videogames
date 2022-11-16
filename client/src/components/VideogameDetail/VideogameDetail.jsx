@@ -53,7 +53,7 @@ export default function VideogameDetail(props) {
                 <div className='sectionDetail'>
                     <div className='videogame-details'>
                         <button className='btn-delete' onClick={handleDelete}>Delete Videogame</button>
-                        <h1 className='videogame-title'>{videogameDb[0].name}</h1>
+                        <h1 className='videogame-title-db'>{videogameDb[0].name}</h1>
                         <img src={videogameDb[0].background_image} alt="videogame" />
                         <div className='videogame-description'>
                             <p>{videogameDb[0].description}</p>

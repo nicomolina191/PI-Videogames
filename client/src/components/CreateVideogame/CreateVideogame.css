@@ -152,7 +152,35 @@ fieldset {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+
+    .createVideogame {
+        display: grid;
+    }
+
+    .createTitle {
+        font-size: 20px;
+        width: 200px;
+        margin-left: 70px;
+        margin-top: 50px;
+    }
+
+    .sectionForm1 {
+        font-size: 15px;
+        margin-left: 5px;
+        padding: 30px;
+    }
+
+    .btn-home {
+        margin-left: 20px;
+    }
+
+    .input1 {
+        width: 300px;
+    }
+}
+
+@media (max-width: 400px) {
 
     .createVideogame {
         display: grid;
